@@ -1,0 +1,7 @@
+<launch>
+  <node name="gmapping" pkg="gmapping" type="slam_gmapping" output="screen">
+     <remap from="scan" to="/scan_repub" />
+     <param name="linearUpdate " value="0.01"/>
+     <param name="angularUpdate  " value="0.1"/>
+  </node>
+</launch>

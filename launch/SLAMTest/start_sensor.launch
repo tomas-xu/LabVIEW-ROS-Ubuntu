@@ -1,0 +1,8 @@
+<launch>
+  <!--<node name="urg_node" pkg="urg_node" type="urg_node" output="screen">
+	<param name="frame_id" value="base_laser" />
+  </node>-->
+  <node name="hokuyo_slam" pkg="hokuyo_slam" type="hokuyo_slam_node" output="screen">
+     <remap from="/scan" to="/myrio_lidar" />
+  </node>
+</launch>

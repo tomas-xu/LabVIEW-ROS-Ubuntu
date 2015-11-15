@@ -1,0 +1,17 @@
+1. Hokoyo laser: sudo chmod a+rw /dev/ttyACM0
+2. . ~/catkin_ws/devel/setup.bash #source workspace, please add to .bashrc.
+3. Remote master: export ROS_MASTER_URI=http://localhost:11311
+4. myRIO: add ROSNode.vi to static VI Reference to load the VI into memory!
+
+Gmapping tutorial: 
+http://wiki.ros.org/slam_gmapping/Tutorials/MappingFromLoggedData
+
+Offline gmapping:
+rosparam set use_sim_time true
+rosbag play --clock ~/data/slam_test_20151108.bag
+
+roslaunch offline_gmapping.launch
+
+###Building a map####
+
+Save your new map: rosrun map_server map_saver
